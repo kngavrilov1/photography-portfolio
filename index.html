@@ -1,126 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kngavrilov.com</title>
-  <meta name="description"
-    content="Hello there, I'm Sophia Williams – an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other.">
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="dist/assets/Brain_icon-icons.com_75034.ico" />
-  <link rel="stylesheet" href="dist/output.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Alpine.js -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <!-- Start - Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
-  <!-- End - Fonts -->
-  <!-- Start - Fancybox Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <!-- End - Fancybox Scripts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      content: ["./dist/*.{html,js}"],
-      theme: {
-        extend:
-                {
-                  fontFamily: {
-                    'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
-                    'signika': ['Signika', 'sans-serif'],
-                  },
-                },
-      },
-      plugins: [],
-    }
-  </script>
-  <style>
-  body
-    {background-image: url(dist/assets/leopard-skin-seamless-pattern_625334-528(1).png);
-     background-repeat: repeat-x;
-     background-repeat: repeat-y;
-     }
-  </style>
-</head>
-<body
-  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
-  <!-- Navbar -->
-  <header class="flex w-full overflow-hidden pt-10 pb-1">
-    <!-- Navbar -->
-    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
-      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
-        <div class="mr-4 md:mr-8">
-          <a href="index.html" class="text-2xl font-signika font-bold">kngavrilov</a>
-        </div>
-        <div class="ml-auto md:hidden flex items-center justify-start">
-          <button onclick="menuToggle()" @click="open = !open"
-            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
-            @click="open = !open">
-            <span class="sr-only">Open main menu</span>
-            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
-              <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
-                :class="{'opacity-0': open } "></span>
-              <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
-                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
-            </div>
-          </button>
-        </div>
-        <div id="menu"
-          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
-          <ul id="ulMenu"
-            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
-            <li class="group transition duration-300">
-              <a href="index.html" class="font-signika text-2xl tap-highlight-transparent">portrait
-                <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
-              </a>
-            </li>
-            <li class="group transition duration-300">
-              <a href="dist/about_me.html" class="font-signika text-2xl tap-highlight-transparent">ABOUT ME
-                <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-              </a>
-            </li>
-            <li class="group transition duration-300">
-              <a href="dist/contact.html" class="font-signika text-2xl tap-highlight-transparent">CONTACT
-                <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!-- Content -->
-  <div>
-  <a href="https://images.kngavrilov.com/portrait/1.jpg" data-fancybox="gallery">
-  <img alt="p1" class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110" src="https://images.kngavrilov.com/portrait/1.jpg" />
-  </a>
-  </div>
-  <!-- Footer -->
-  <footer>
-      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
-<a href="mailto:emailme@kngavrilov.com">emailme@kngavrilov.com</a>
+<meta name="robots" content="noindex">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>kngavrilov.com</title>
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/Brain_icon-icons.com_75034.ico"/>
+  </head>
+  <body>
+    <div class="header">
+      <p style="margin-left: 1%;">
+        <a href="https://kngavrilov.com/" style="color: aquamarine;">kngavrilov</a>
+        <a href="https://kngavrilov.com/" style="color: #b74224;">landscape</a>
+        <a href="https://kngavrilov.com/" style="color: #fbb7c0;">about</a>
       </p>
-  </footer>
-  <!-- Script for the LightBox -->
-  <script>
-    Fancybox.bind("[data-fancybox]", {});
-  </script>
-  <script src="dist/fade_in.js"></script>
-  <script src="dist/menu.js"></script>
-</body>
+    </div>
+    <div id="wrapper"></div>
+    <img src="assets/autodraw.png" class="fullscreen"></img>
+<style>
+body{
+  background-image:url("assets/istockphoto-1053817178-612x612.jpg");
+  background-repeat: repeat;
+  background-color: black;
+}
+a{text-decoration: none; }
+div.a{
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.header{
+  height: 6vh;
+  font-size: 6vh;
+}
+.fullscreen
+ {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+}
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 40%;
+}
+</style>
 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox]', {
+        // Your custom options
+      });    
+    </script>
+    <script>
+      var wrapper = document.getElementById("wrapper");
+      var i = 1
+      var myHTML = `<div class="a" style="background-image:url('https://images.kngavrilov.com/portrait/${i}.jpg');"> <a href="https://images.kngavrilov.com/portrait/${i}.jpg" data-fancybox="gallery" class="fill-div"> </a> </div>`;
+      wrapper.innerHTML = myHTML
+    </script>
+  </body>
 </html>
+
+
+
+
+
+
