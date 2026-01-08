@@ -22,7 +22,7 @@
     <div id="wrapper"></div>
 <div style="text-align: center;">
   <input type="button" class="foot" id="vorige" value="previous" onclick="previous()">   
-  <input type="text" id="number" style="border: none;">
+  <input type="text" id="number" class="foot"  placeholder="enter number" style="border: none;">
   <input type="button" class="foot" id="volgende" value="next" onclick="next()">
 </div>
     <img src="assets/landscape.png" class="fullscreen"></img>
@@ -34,13 +34,13 @@ body{
 }
 a{text-decoration: none; }
 div.a{
-  height: 51vw;
+  height: 73vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .header{
-  height: 5vh;  
+  height: 4.5vh;  
   font-size: 5vh;
 }
 .fullscreen
@@ -66,7 +66,9 @@ p{
   font-size: 45%;
 }
 .foot{
-  display: inline-block; 
+  display: inline-block;
+  height:2.5vh;
+  width:10vh;   
 }
 #volgende{
   background-color: #3c0928; 
