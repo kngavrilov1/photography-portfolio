@@ -14,9 +14,9 @@
   <body>
     <div class="header">
       <p style="margin-left: 1%;">
-        <a href="https://kngavrilov.com/" style="color: aquamarine;">kngavrilov</a>
-        <a href="index.html" style="color: #b74224;">portrait</a>
-        <a href="landscape.html" style="color: #fbb7c0;">landscape</a>
+        <a href="https://kngavrilov.com/" style="color: aquamarine;" class="courier">kngavrilov</a>
+        <a href="index.html" style="color: #b74224;" class="courier">portrait</a>
+        <a href="landscape.html" style="color: #fbb7c0;" class="courier">landscape</a>
       </p>
     </div>
     <div class="a">i cant be bothered to write a about page rn but you can always <a href="mailto:emailme@kngavrilov.com">emailme@kngavrilov.com</a> </br> these are some of the songs i listen to <a href="https://open.spotify.com/playlist/6W2ZfOQCKUv6BM7XNMmn8Y?si=3d8b73f612874e59">(playlist)</a>
@@ -24,6 +24,13 @@
     </div>
 
 <style>
+    @font-face {
+  font-family: typewriter;
+  src: url("typwriter.ttf");
+}
+.courier{
+  font-family: typewriter;
+}
 body{   
   background-image:url("assets/navy.jpg");
   background-repeat: repeat;
@@ -39,6 +46,7 @@ height: auto;
 .header{
   height: 4.5vh;  
   font-size: 5vh;
+  font-family: 'Courier New', Courier, monospace;
 }
 .fullscreen
  {

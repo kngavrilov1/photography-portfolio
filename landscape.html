@@ -14,19 +14,26 @@
   <body>
     <div class="header">
       <p style="margin-left: 1%;">
-        <a href="https://kngavrilov.com/" style="color: aquamarine;">kngavrilov</a>
-        <a href="index.html" style="color: #b74224;">portrait</a>
-        <a href="about.html" style="color: #fbb7c0;">about</a>
+        <a href="https://kngavrilov.com/" style="color: aquamarine;"class="courier">kngavrilov</a>
+        <a href="index.html" style="color: #b74224;" class="courier">portrait</a>
+        <a href="about.html" style="color: #fbb7c0;" class="courier">about</a>
       </p>
     </div>
     <div id="wrapper"></div>
 <div style="text-align: center;">
   <input type="button" class="foot" id="vorige" value="previous" onclick="previous()">   
-  <input type="text" id="number" class="foot"  placeholder="enter number" style="border: none;">
+  <input type="text" id="number" class="foot"  placeholder="enter number">
   <input type="button" class="foot" id="volgende" value="next" onclick="next()">
 </div>
     <img src="assets/landscape.png" class="fullscreen"></img>
 <style>
+  @font-face {
+  font-family: typewriter;
+  src: url("typwriter.ttf");
+}
+.courier{
+  font-family: typewriter;
+}
 body{
   background-image:url("assets/green.jpg");
   background-repeat: repeat;
@@ -40,9 +47,13 @@ div.a{
   background-position: center;
   background-size: contain;
 }
+::placeholder {
+   text-align: center; 
+}
 .header{
   height: 4.5vh;  
   font-size: 5vh;
+  font-family: 'Courier New', Courier, monospace;
 }
 .fullscreen
  {
@@ -70,6 +81,7 @@ p{
   display: inline-block;
   height:2.5vh;
   width:10vh;   
+  border: none;
 }
 #volgende{
   background-color: #3c0928; 

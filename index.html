@@ -14,18 +14,22 @@
   <body>
     <div class="header">
       <p style="margin-left: 1%;">
-        <a href="https://kngavrilov.com/" style="color: aquamarine;">kngavrilov</a>
-        <a href="landscape.html" style="color: #b74224;">landscape</a>
-        <a href="about.html" style="color: #fbb7c0;">about</a>
+        <a href="https://kngavrilov.com/" style="color: aquamarine;" class="courier">kngavrilov</a>
+        <a href="landscape.html" style="color: #b74224;" class="courier">landscape</a>
+        <a href="about.html" style="color: #fbb7c0;" class="courier">about</a>
       </p>
     </div>
     <div id="wrapper"></div>
 <div style="text-align: center;">
   <input type="button" class="foot" id="vorige" value="previous" onclick="previous()">   
-  <input type="text" id="number" style="border: none;" class="foot"  placeholder="enter number">
+  <input type="text" id="number"  class="foot"  placeholder="enter number">
   <input type="button" class="foot" id="volgende" value="next" onclick="next()">
 </div>
 <style>
+  @font-face {
+  font-family: typewriter;
+  src: url("typwriter.ttf");
+}
 body{
   background-image:url("assets/istockphoto-1053817178-612x612.jpg");
   background-repeat: repeat;
@@ -41,6 +45,13 @@ div.a{
 .header{
   height: 4.5vh;  
   font-size: 5vh;
+  
+}
+::placeholder {
+   text-align: center; 
+}
+.courier{
+  font-family: typewriter;
 }
 .fullscreen
  {
@@ -67,7 +78,8 @@ p{
 .foot{
   display: inline-block;
   height:2.5vh;
-  width:10vh;   
+  width:10vh;  
+  border: none; 
 }
 #volgende{
   background-color: #3c0928; 
