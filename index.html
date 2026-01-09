@@ -17,6 +17,7 @@
         <a href="https://kngavrilov.com/" style="color: aquamarine;" class="courier">kngavrilov</a>
         <a href="landscape.html" style="color: #b74224;" class="courier">landscape</a>
         <a href="about.html" style="color: #fbb7c0;" class="courier">about</a>
+        <a class="courier" style="color: grey;" onclick="muteAudio();">(un)mute</a>
       </p>
     </div>
     <div id="wrapper"></div>
@@ -29,6 +30,9 @@
   @font-face {
   font-family: typewriter;
   src: url("typwriter.ttf");
+}
+.courier{
+  font-family: typewriter;
 }
 body{
   background-image:url("assets/istockphoto-1053817178-612x612.jpg");
@@ -49,9 +53,6 @@ div.a{
 }
 ::placeholder {
    text-align: center; 
-}
-.courier{
-  font-family: typewriter;
 }
 .fullscreen
  {
@@ -101,6 +102,11 @@ p{
       });    
     </script>
     <script>
+      var audio = new Audio("assets/nature.mp3");
+      audio.play();
+      function muteAudio() {
+        audio.play();
+        audio.muted = !audio.muted;}
       var wrapper = document.getElementById("wrapper");
       var totalphotos = 26
       var i = Math.floor(Math.random() * (totalphotos - 2) ) + 1;
