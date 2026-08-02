@@ -122,7 +122,7 @@ p{
       }
       }
       function next() {
-      if (i<=totalphotos){
+      if (i<totalphotos){
         var myHTML = `<div class="a" style="background-image:url('https://images.kngavrilov.com/landscape/${i+1}.jpg');"> <a href="https://images.kngavrilov.com/landscape/${i+1}.jpg" data-fancybox="gallery" class="fill-div"> </a> </div>`;
         i+=1
         document.getElementById("wrapper").innerHTML = myHTML;
